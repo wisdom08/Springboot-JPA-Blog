@@ -30,7 +30,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //시퀀스, auto_increatement
     private int id;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 30, unique = true)
      private String username;
 
     @Column(nullable = false, length = 100) //12345 => 해쉬(비밀번호 암호화)
