@@ -70,8 +70,10 @@ public class DummyControllerTest {
         return userRepository.findAll();
     }
 
+
+    //한 페이지 당 2건의 데이터를 리턴받아 볼 예정
     @GetMapping("/dummy/user")
-    public List<User> pageList(
+    public Page<User> pageList(
             @PageableDefault(size=2, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
         Page<User> pagingUser = userRepository.findAll(pageable);
 
@@ -79,7 +81,7 @@ public class DummyControllerTest {
         }*/
 
         List<User> users = pagingUser.getContent();
-        return users;
+        return pagingUser;
     }
 
 
