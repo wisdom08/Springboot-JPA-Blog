@@ -25,7 +25,7 @@
     </form>
 
 </div>
-<%--
+
 <script type="text/javascript">
 
     let index = {
@@ -64,6 +64,6 @@
     }
 
     index.init();
-</script>--%>
+</script>
 
 <%@ include file="../layout/footer.jsp"%>
